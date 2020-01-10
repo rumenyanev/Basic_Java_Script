@@ -1,25 +1,25 @@
 function tradeCommissions(input){
     let town = input.shift();
     let sales = Number(input.shift());
-    let comission = 0;
+    let commission = 0;
 
 
     if ("Sofia" == town) {
         if (sales >= 0 && sales <= 500) {
-            comission = 0.05;
-            let total = sales * comission;
+            commission = 0.05;
+            let total = sales * commission;
            console.log (total.toFixed(2));
         } else if (sales > 500 && sales <= 1000) {
-            comission = 0.07;
-            let total = sales * comission;
+            commission = 0.07;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 1000 && sales <= 10000) {
-            comission = 0.08;
-            let total = sales * comission;
+            commission = 0.08;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 10000) {
-            comission = 0.12;
-            let total = sales * comission;
+            commission = 0.12;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else {
             console.log("error");
@@ -27,40 +27,40 @@ function tradeCommissions(input){
 
     } else if ("Varna" === town) {
         if (sales >= 0 && sales <= 500) {
-            comission = 0.045;
-            let total = sales * comission;
+            commission = 0.045;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 500 && sales <= 1000) {
-            comission = 0.075;
-            let total = sales * comission;
+            commission = 0.075;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 1000 && sales <= 10000) {
-            comission = 0.1;
-            let total = sales * comission;
+            commission = 0.1;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 10000) {
-            comission = 0.13;
-            let total = sales * comission;
+            commission = 0.13;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else {
             console.log("error");
         }
     } else if ("Plovdiv" == town) {
         if (sales >= 0 && sales <= 500) {
-            comission = 0.055;
-            let total = sales * comission;
+            commission = 0.055;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 500 && sales <= 1000) {
-            comission = 0.08;
-            let total = sales * comission;
+            commission = 0.08;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 1000 && sales <= 10000) {
-            comission = 0.12;
-            let total = sales * comission;
+            commission = 0.12;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else if (sales > 10000) {
-            comission = 0.145;
-            let total = sales * comission;
+            commission = 0.145;
+            let total = sales * commission;
             console.log(total.toFixed(2));
         } else {
           console.log("error");
