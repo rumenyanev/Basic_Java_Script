@@ -1,23 +1,23 @@
 function bonusScore(input){
-    let numer = Number(input.shift());
+    let number = Number(input.shift());
     let bonusPoints = 0;
-    if (numer <= 100){
+    if (number <= 100){
         bonusPoints += 5;
     }
-     if(numer > 100){
-        bonusPoints = numer * 0.20;
+     if(number > 100){
+        bonusPoints = number * 0.20;
     }
-     if (numer > 1000){
-        bonusPoints = numer * 0.10;
+     if (number > 1000){
+        bonusPoints = number * 0.10;
     }
-    if (numer % 2 === 0){
+    if (number % 2 === 0){
         bonusPoints +=  1;
     }
-    if (numer % 10 == 5){
+    if (number % 10 == 5){
         bonusPoints += 2;
     }
     console.log(bonusPoints);
-    console.log(bonusPoints + numer);
+    console.log(bonusPoints + number);
     }
 bonusScore([20]);
 bonusScore([175]);

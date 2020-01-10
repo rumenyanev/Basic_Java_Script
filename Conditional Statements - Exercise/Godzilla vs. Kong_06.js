@@ -1,39 +1,39 @@
-function godzillaVsKong(input){
+function godzillaVsKong(input) {
     let budget = Number(input.shift());
     let people = Number(input.shift());
     let priceClothingForOnePerson = Number(input.shift());
 
-    
+
     let decor = budget * 0.10;
     let priceAllClothing = people * priceClothingForOnePerson;
 
-    if(people > 150){
-        priceAllClothing -= priceAllClothing *0.10;
-     }
+    if (people > 150) {
+        priceAllClothing -= priceAllClothing * 0.10;
+    }
     let allCosts = decor + priceAllClothing;
 
     let neededMoney = Math.abs(budget - allCosts);
     let leftMoney = Math.abs(allCosts - budget);
-    
-     
 
-    if(allCosts > budget){
+
+
+    if (allCosts > budget) {
         console.log("Not enough money!");
         console.log(`Wingard needs ${neededMoney.toFixed(2)} leva more.`)
     }
-    else{
+    else {
         console.log("Action!");
         console.log(`Wingard starts filming with ${leftMoney.toFixed(2)} leva left.`)
     }
-    
+
 
 }
-godzillaVsKong([20000,120,55.5]); 
-godzillaVsKong([15437.62,186,57.99]);
-godzillaVsKong([9587.88,222,55.68]);
+godzillaVsKong([20000, 120, 55.5]);
+godzillaVsKong([15437.62, 186, 57.99]);
+godzillaVsKong([9587.88, 222, 55.68]);
 /*Годзила срещу Конг
-Снимките за дългоочаквания филм "Годзила срещу Конг" започват. 
-Сценаристът Адам Уингард ви моли да напишете програма, която да изчисли, 
+Снимките за дългоочаквания филм "Годзила срещу Конг" започват.
+Сценаристът Адам Уингард ви моли да напишете програма, която да изчисли,
 дали предвидените средства са достатъчни за снимането на филма.
 За снимките ще бъдат нужни определен брой статисти, облекло за всеки един статист и декор.
 Известно е, че:
@@ -54,7 +54,7 @@ o "Action!"
 o "Wingard starts filming with {останалите пари} leva left."
 Резултатът трябва да е форматиран до втория знак след десетичната запетая.
 Примерен вход и изход
-Вход  
+Вход
 20000
 120
 55.5
