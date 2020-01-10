@@ -8,9 +8,9 @@ function areaOfFigures(input){
             console.log(area.toFixed(3));
             break;
             case "rectangle":
-            let lenght = Number(input.shift());
+            let length = Number(input.shift());
             let width = Number(input.shift());
-             area = lenght * width;
+             area = length * width;
             console.log(area.toFixed(3));
             break;
             case "circle":

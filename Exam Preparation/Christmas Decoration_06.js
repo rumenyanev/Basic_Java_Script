@@ -7,7 +7,7 @@ function christmasDecoration(input) {
     while (input != "Stop") {
         nameSubject = input.shift();
         for(let i = 0; i <= nameSubject.length ; i++){
-              money += nameSubject.charCodeAt[i];
+              money += nameSubject.charCodeAt(i);
         }
         console.log(Number(money))
     }

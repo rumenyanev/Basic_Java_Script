@@ -7,17 +7,17 @@ function toyShop(input){
     let numTrucks = Number(input.shift());
 
     let pricePuzzles = 2.60;
-    let priceTallkingDolls = 3.00;
+    let priceTalkingDolls = 3.00;
     let priceTeddyBears = 4.10;
     let priceMignons = 8.20;
     let priceTrucks = 2.00;
 
-    let numsToys = numPuzzles + numTalkingDolls + numTeddyBears + numMignons + numTrucks;
+    let numToys = numPuzzles + numTalkingDolls + numTeddyBears + numMignons + numTrucks;
 
-    let sumPriceToys = (numPuzzles*pricePuzzles)+(priceTallkingDolls * numTalkingDolls)+
+    let sumPriceToys = (numPuzzles*pricePuzzles)+(priceTalkingDolls * numTalkingDolls)+
     (priceTeddyBears * numTeddyBears)+ (priceMignons * numMignons)+(priceTrucks * numTrucks);
 
-    if(numsToys >=50){
+    if(numToys >=50){
         sumPriceToys -= sumPriceToys * 0.25;
     }
     let finalProfit = sumPriceToys - sumPriceToys * 0.10;
