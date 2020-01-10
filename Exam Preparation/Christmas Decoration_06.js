@@ -7,11 +7,12 @@ function christmasDecoration(input) {
     while (input != "Stop") {
         nameSubject = input.shift();
         for(let i = 0; i <= nameSubject.length ; i++){
-              money+=
+              money += nameSubject.charCodeAt[i];
         }
+        console.log(Number(money))
     }
 }
-christmasDecoration([]);
+christmasDecoration([3000,"star","Christmas tree","tinsel","Tree stand","Stop"]);
 /*Задача 6. Коледна украса
 Семейство Иванови решават да подменят коледната украса в своя дом и да поръчат нова по интернет.
 Вашата задача е да напишете програма, която изчислява, дали бюджетът ще им стигне за украсата.

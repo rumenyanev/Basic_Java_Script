@@ -7,8 +7,7 @@ function numbersEndingIn7(){
     }
 } 
 numbersEndingIn7([]);
-numbersEndingIn7([]);
-numbersEndingIn7([]);
+
 /*Числа до 1000, завършващи на 7
 Напишете програма, която отпечатва числата в диапазона [1…1000], които завършват на 7.
 вход 
