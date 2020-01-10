@@ -9,7 +9,7 @@ function fishingBoat(input){
         case"Spring":
         priceRental = 3000;
 if(numOfFishers <= 6){
-    priceRental = priceRenta * 0.90;
+    priceRental = priceRental * 0.90;
 }
 else if (numOfFishers > 6 && numOfFishers <= 11){
     priceRental = priceRental * 0.85;
