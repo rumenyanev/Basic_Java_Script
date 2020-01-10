@@ -4,71 +4,71 @@ function fishingBoat(input){
     let season = input.shift();
     let numOfFishers = Number(input.shift());
 
-    let priceRenta = 0.0;
+    let priceRental = 0.0;
     switch(season){
         case"Spring":
-        priceRenta = 3000;
+        priceRental = 3000;
 if(numOfFishers <= 6){
-    priceRenta = priceRenta * 0.90;
+    priceRental = priceRenta * 0.90;
 }
 else if (numOfFishers > 6 && numOfFishers <= 11){
-    priceRenta = priceRenta * 0.85;
+    priceRental = priceRental * 0.85;
 }
 else if(numOfFishers > 11){
-    priceRenta = priceRenta * 0.75;
+    priceRental = priceRental * 0.75;
 }
 if ( numOfFishers % 2 === 0){
-    priceRenta = priceRenta * 0.95;
+    priceRental = priceRental * 0.95;
 }
         break;
         case"Summer":
-        priceRenta = 4200;
+        priceRental = 4200;
 if(numOfFishers <= 6){
-    priceRenta = priceRenta * 0.90;
+    priceRental = priceRental * 0.90;
 }
 else if (numOfFishers > 6 && numOfFishers <= 11){
-    priceRenta = priceRenta * 0.85;
+    priceRental = priceRental * 0.85;
 }
 else if(numOfFishers > 11){
-    priceRenta = priceRenta * 0.75;
+    priceRental = priceRental * 0.75;
 }
 if ( numOfFishers % 2 === 0){
-    priceRenta = priceRenta * 0.95;
+    priceRental = priceRental * 0.95;
 }
         break;
        case"Autumn":
-priceRenta = 4200;
+priceRental = 4200;
 if(numOfFishers <= 6){
-    priceRenta = priceRenta * 0.90;
+    priceRental = priceRental * 0.90;
 }
 else if (numOfFishers > 6 && numOfFishers <= 11){
-    priceRenta = priceRenta * 0.85;
+    priceRental = priceRental * 0.85;
 }
 else if(numOfFishers > 11){
-    priceRenta = priceRenta * 0.75;
+    priceRental = priceRental * 0.75;
 }
         break;
       case"Winter":
-priceRenta = 2600;
+priceRental = 2600;
 if(numOfFishers <= 6){
-    priceRenta = priceRenta * 0.90;
+    priceRental = priceRental * 0.90;
 }
 else if (numOfFishers > 6 && numOfFishers <= 11){
-    priceRenta = priceRenta * 0.85;
+    priceRental = priceRental * 0.85;
 }
 else if(numOfFishers > 11){
-    priceRenta = priceRenta * 0.75;
+    priceRental = priceRental * 0.75;
 }
 if ( numOfFishers % 2 === 0){
-    priceRenta = priceRenta * 0.95;
+    priceRental = priceRental * 0.95;
 }
           break;
     }
-    if(budget >= priceRenta){
-        console.log(`Yes! You have ${Math.abs(budget - priceRenta).toFixed(2)} leva left.`)
+    if(budget >= priceRental){
+        console.log(`Yes! You have ${Math.abs(budget - priceRental).toFixed(2)} leva left.`)
     }
     else {
-        console.log(`Not enough money! You need ${Math.abs(budget - priceRenta).toFixed(2)} leva.`)
+        console.log(`Not enough money! You need ${Math.abs(budget - priceRental).toFixed(2)} leva.`)
     }
 
 }
