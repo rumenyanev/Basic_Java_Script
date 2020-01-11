@@ -1,18 +1,27 @@
+
+
 function christmasDecoration(input) {
-
     let budget = +input.shift();
-
-    let nameSubject = "";
     let money = 0;
-    while (input != "Stop") {
-        nameSubject = input.shift();
-        for(let i = 0; i <= nameSubject.length ; i++){
-              money += nameSubject.charCodeAt(i);
+    let nameSubject = input.shift();
+    while (nameSubject != 'Stop') {
+        for (let i = 0; i < nameSubject.length; i++) {
+            money += nameSubject.charCodeAt(i);
         }
-        console.log(Number(money))
+        if (money <= budget) {
+            console.log('Item successfully purchased!');
+        } else {
+            console.log('Not enough money!');
+            break;
+        }
+        nameSubject = input.shift();
+    }
+    if (money <= budget) {
+        console.log(`Money left: ${budget - money}`);
     }
 }
-christmasDecoration([3000,"star","Christmas tree","tinsel","Tree stand","Stop"]);
+christmasDecoration([3000, "star", "Christmas tree", "tinsel", "Tree stand", "Stop"]);
+christmasDecoration([5000, "Christmas lights", "wreath", "Stop"]);
 /*Задача 6. Коледна украса
 Семейство Иванови решават да подменят коледната украса в своя дом и да поръчат нова по интернет.
 Вашата задача е да напишете програма, която изчислява, дали бюджетът ще им стигне за украсата.
@@ -30,7 +39,7 @@ christmasDecoration([3000,"star","Christmas tree","tinsel","Tree stand","Stop"])
 При получаване на команда "Stop", на конзолата да се отпечата:
 "Money left: {останалият бюджет}" и програмата да приключи
 Примерен вход и изход
-Вход	
+Вход
 3000
 star
 Christmas tree

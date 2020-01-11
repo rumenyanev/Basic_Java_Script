@@ -1,68 +1,65 @@
 function worldSnookerChampionship(input) {
 
-    let stage = input[0];
-    let typeTickets = input[1];///////80/100 ??
-    let numTickets = +input[2];
-    let photo = input[3];
+    let stage = input.shift();
+    let typeTickets = input.shift();/// 90/100 ???
+    let numTickets = +input.shift();
+    let photo = input.shift();
 
     let priceTicket = 0;
     let allPriceTickets = 0;
-    switch (stage) {
-        case "Quarter final":
-        if (typeTickets == "Standard") {
-            priceTicket = 55.50;
-        }
-        else if (typeTickets == "Premium") {
-            priceTicket = 105.20;
-        }
-        else if (typeTickets == "VIP") {
-            priceTicket = 118.90;
-        }
-        break;
-        case "Semi final":
-        if (typeTickets == "Standard") {
-            priceTicket = 75.88;
-        }
-        else if (typeTickets == "Premium") {
-            priceTicket = 125.22;
-        }
-        else if (typeTickets == "VIP") {
-            priceTicket = 300.40;
-        }
 
-        break;
-        case "Final":
-        if (typeTickets == "Standard") {
-            priceTicket = 110.10;
-        }
-        else if (typeTickets == "Premium") {
-            priceTicket = 160.66;
-        }
-        else if (typeTickets == "VIP") {
-            priceTicket = 400;
-        }
-        break;
+    if (typeTickets == "Standard" && stage == "Quarter final") {
+        priceTicket = 55.50;
     }
-     allPriceTickets = priceTicket * numTickets;
-    if(allPriceTickets >= 4000){
-        allPriceTickets = (allPriceTickets * 0.75); 
-        if(photo === 'Y'){
-            allPriceTickets -= (numTickets * 40); 
-        }
-        
-    }else if(allPriceTickets >= 2500){
-        allPriceTickets = (allPriceTickets * 0.90); 
-        
-    }if(photo === 'Y'){
-        allPriceTickets += (numTickets * 40);
+    else if (typeTickets == "Premium" && stage == "Quarter final") {
+        priceTicket = 105.20;
     }
-    console.log(allPriceTickets.toFixed(2))
+    else if (typeTickets == "VIP" && stage == "Quarter final") {
+        priceTicket = 118.90;
+    }
+
+    if (typeTickets == "Standard" && stage == "Semi final") {
+        priceTicket = 75.88;
+    }
+    else if (typeTickets == "Premium" && stage == "Semi final") {
+        priceTicket = 125.22;
+    }
+    else if (typeTickets == "VIP" && stage == "Semi final") {
+        priceTicket = 300.40;
+    }
+
+
+    if (typeTickets == "Standard" && stage == "Final") {
+        priceTicket = 110.10;
+    }
+    else if (typeTickets == "Premium" && stage == "Final") {
+        priceTicket = 160.66;
+    }
+    else if (typeTickets == "VIP" && stage == "Final") {
+        priceTicket = 400;
+    }
+
+
+allPriceTickets = priceTicket * numTickets;
+let allTicket = allPriceTickets;
+if (allPriceTickets > 4000) {
+    allPriceTickets = (allPriceTickets * 0.75);
+
+} else if (allPriceTickets > 2500) {
+    allPriceTickets = (allPriceTickets * 0.90);
+
+} if (photo === 'Y' && allTicket <= 4000) {
+    allPriceTickets += (numTickets * 40);
 }
-worldSnookerChampionship(["Final","Premium",1,'Y'])
+console.log(allPriceTickets.toFixed(2))
+}
 
-worldSnookerChampionship(["Final","Premium",25,'Y']); 
-worldSnookerChampionship(["Semi final","VIP",9,'Y']);
+
+
+worldSnookerChampionship(["Final", "Premium", 25, 'Y']);
+/*worldSnookerChampionship(["Semi final","VIP",9,'Y']);
 worldSnookerChampionship(["Quarter final","Standard",11,'N']);
+worldSnookerChampionship(["Final","Premium",25,'Y']);
 /*Задача 3. Билети за снукър
 С наближаването на световното първенство по снукър в театъра Крусибъл в Шефилд, Англия, феновете нямат търпение
 да се сдобият с ценните билети. Заради големия наплив от хора, организаторите ви молят да напишете програма
@@ -111,7 +108,7 @@ Y
 Semi final
 VIP
 9
-Y	
+Y
 
 Изход
 2793.24
